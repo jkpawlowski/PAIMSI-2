@@ -32,7 +32,7 @@ void menu() {
 	cout << "1.Podaj rozmiar i wymieszaj" << endl
 		<< "2.Wyswietl" << endl
 		<< "3.Merge sort" << endl
-
+		<< "4.quick sort" << endl
 		<< "9.Menu" << endl;
 
 }
@@ -41,3 +41,4 @@ void print(int*t, int &size) {
 	for (int i = 0; i < size; i++)
 		std::cout << t[i] << std::endl;
 }
+

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "funkcje.h"
 #include "merge.h"
+#include "quick.h"
 
 using namespace std;
 
@@ -27,6 +28,9 @@ int main() {
 			break;
 		case 3:
 			merge_sort(*t, 0, size - 1);
+			break;
+		case 4:
+			quick_sort(*t,size);
 			break;
 
 		case 9:
