@@ -2,22 +2,24 @@
 #include <iostream>
 #include <time.h>
 
+
 using namespace std;
 
-void make_tab(int **t, long& size) {
+template <typename Typ>
+void make_tab(Typ **t, Typ& size) {
 	cout << "rozmiar: ";
 	cin >> size;
 
 	delete []t[0];
 
-	*t = new int[size];
-	for (long i = 0; i < size; i++)
+	*t = new Typ[size];
+	for (Typ i = 0; i < size; i++)
 		t[0][i] = i;
 
-	srand(time(NULL));
+	srand((Typ)time(NULL));
 
-	long i, j, tmp;
-	long l = size - 1;
+	Typ i, j, tmp;
+	Typ l = size - 1;
 
 	while (l) {
 		i = rand() % size + 0;
@@ -37,9 +39,9 @@ void menu() {
 		<< "9.Menu" << endl;
 
 }
-
-void print(int*t, long &size) {
-	for (long i = 0; i < size; i++)
+template <typename Typ>
+void print(Typ*t, Typ size) {
+	for (Typ i = 0; i < size; i++)
 		std::cout << t[i] << std::endl;
 }
 

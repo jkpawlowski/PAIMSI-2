@@ -9,13 +9,17 @@
 using namespace std;
 
 int main() {
-	int o=1;
-	long size =1;
-	int **t=new int*[1];
-	*t= new int[1];
+	
+	typedef int Typ;
+
+	Typ o=1;
+	Typ size =1;
+	Typ **t=new Typ*[1];
+	*t= new Typ[1];
 	
 
 	menu();
+
 	while (o != 0) {
 		cout << "Podaj opcje: ";
 		cin >> o;
@@ -24,20 +28,22 @@ int main() {
 
 
 		case 1:
-			make_tab(t, size);
+			make_tab<Typ>(t, size);
 			break;
 		case 2:
-			print(*t, size);
+			print<Typ>(*t, size);
 			break;
 		case 3:
-			merge_sort(*t, 0, size - 1);
+			merge_sort<Typ>(*t, 0, size - 1);
 			break;
 		case 4:
-			quick_sort(*t,size);
+			quick_sort<Typ>(*t,size);
 			break;
 		case 5:
-			hybrid_sort(*t,size);
+			hybrid_sort<Typ>(*t,size);
 			break;
+		case 6:
+			heap_sort<Typ>(*t, 0, size);
 
 		case 9:
 			menu();

@@ -3,10 +3,12 @@
 #include<algorithm>
 
 using namespace std;
-
-void heap_sort(int*t, long org, long end) {
+/*
+template <typename Typ>
+void heap_sort(Typ*t, Typ org, Typ end) {
 	
 	make_heap(t, t+end);
 	sort_heap(t, t + end);
 	
 }
+*/

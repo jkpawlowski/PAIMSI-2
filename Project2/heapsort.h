@@ -1,3 +1,7 @@
 #pragma once
+template <typename Typ>void heap_sort(Typ*t, Typ org, Typ end) {
 
-void heap_sort(int*, long, long);
+	make_heap(t, t + end);
+	sort_heap(t, t + end);
+
+}
