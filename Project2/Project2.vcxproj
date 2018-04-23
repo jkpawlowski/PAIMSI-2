@@ -115,12 +115,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="heapsort.cpp" />
+    <ClCompile Include="insertsort.cpp" />
+    <ClCompile Include="introsort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="merge.cpp" />
     <ClCompile Include="quick.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="funkcje.h" />
+    <ClInclude Include="heapsort.h" />
+    <ClInclude Include="insertsort.h" />
+    <ClInclude Include="introsort.h" />
     <ClInclude Include="merge.h" />
     <ClInclude Include="quick.h" />
     <ClInclude Include="resource.h" />

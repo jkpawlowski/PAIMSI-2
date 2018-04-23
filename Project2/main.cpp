@@ -2,12 +2,15 @@
 #include "funkcje.h"
 #include "merge.h"
 #include "quick.h"
+#include "introsort.h"
+#include "insertsort.h"
+#include "heapsort.h"
 
 using namespace std;
 
 int main() {
 	int o=1;
-	int size =1;
+	long size =1;
 	int **t=new int*[1];
 	*t= new int[1];
 	
@@ -31,6 +34,9 @@ int main() {
 			break;
 		case 4:
 			quick_sort(*t,size);
+			break;
+		case 5:
+			hybrid_sort(*t,size);
 			break;
 
 		case 9:
