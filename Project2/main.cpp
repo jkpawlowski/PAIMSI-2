@@ -10,12 +10,14 @@ using namespace std;
 
 int main() {
 	
-	typedef int Typ;
+	typedef unsigned int Typ; //typ dla naszej tablicy elementow
+	Typ size = 1;
+
 
 	Typ o=1;
-	Typ size =1;
 	Typ **t=new Typ*[1];
-	*t= new Typ[1];
+	*t= new Typ[size];
+	
 	
 
 	menu();
@@ -25,7 +27,7 @@ int main() {
 		cin >> o;
 		cout << endl;
 		switch (o) {
-
+			make_tab<Typ>(t, size);
 
 		case 1:
 			make_tab<Typ>(t, size);
@@ -43,8 +45,12 @@ int main() {
 			hybrid_sort<Typ>(*t,size);
 			break;
 		case 6:
-			heap_sort<Typ>(*t, 0, size);
-
+			heap_sort<Typ>(*t, 0, size); //kopcowanie jak ktos chce
+			break;
+		case 7: 
+			if (Posortowane<Typ>(*t, size)) cout <<" posortowane "<< endl;
+			else cout << "nie posortowane" << endl;
+			break;
 		case 9:
 			menu();
 			break;
